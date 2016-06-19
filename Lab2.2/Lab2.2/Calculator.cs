@@ -4,19 +4,19 @@ namespace Lab2._2
 {
     public class Calculations
     {
-        public static double divide(double number1, double number2)
+        public static double Divide(double number1, double number2)
         {
             return (number1 / number2);
         }
-        public static double add(double number1, double number2)
+        public static double Add(double number1, double number2)
         {
             return number1 + number2;
         }
-        public static double multiply(double number1, double number2)
+        public static double Multiply(double number1, double number2)
         {
             return number1 * number2;
         }
-        public static double substract(double number1, double number2)
+        public static double Substract(double number1, double number2)
         {
             return number1 - number2;
         }
@@ -26,10 +26,10 @@ namespace Lab2._2
     {
         private static void Main()
         {
-            double fNumber = 0;
-            double sNumber = 0;
+            double fNumber;
+            double sNumber;
             string userInput;
-            bool validOperator = false;
+            var validOperator = false;
 
             Console.Write("Insert First Number: ");
             double.TryParse(Console.ReadLine(), out fNumber);
@@ -41,29 +41,24 @@ namespace Lab2._2
                 Console.Write("Insert operator ( + / - * ) that you want: ");
                 userInput = Console.ReadLine();
 
-                if (userInput == "/")
+                switch (userInput)
                 {
-                    Console.WriteLine("The Answer is: " + Calculations.divide(fNumber, sNumber));
-                    validOperator = true;
-                }
-                else if (userInput == "+")
-                {
-                    Console.WriteLine("The Answer is: " + Calculations.add(fNumber, sNumber));
-                    validOperator = true; ;
-                }
-                else if (userInput == "*")
-                {
-                    Console.WriteLine("The Answer is: " + Calculations.multiply(fNumber, sNumber));
-                    validOperator = true;
-                }
-                else if (userInput == "-")
-                {
-                    Console.WriteLine("The Answer is: " + Calculations.substract(fNumber, sNumber));
-                    validOperator = true;
-                }
-                else
-                {
-                    validOperator = false;
+                    case "/":
+                        Console.WriteLine("The Answer is: " + Calculations.Divide(fNumber, sNumber));
+                        validOperator = true;
+                        break;
+                    case "+":
+                        Console.WriteLine("The Answer is: " + Calculations.Add(fNumber, sNumber));
+                        validOperator = true;
+                        break;
+                    case "*":
+                        Console.WriteLine("The Answer is: " + Calculations.Multiply(fNumber, sNumber));
+                        validOperator = true;
+                        break;
+                    case "-":
+                        Console.WriteLine("The Answer is: " + Calculations.Substract(fNumber, sNumber));
+                        validOperator = true;
+                        break;
                 }
             }
         }
