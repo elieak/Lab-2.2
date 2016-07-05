@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq.Expressions;
 
 namespace Lab2._2
 {
@@ -59,7 +58,7 @@ namespace Lab2._2
                         {
                             Console.WriteLine("The Answer is: " + myCalc.Divide(fNumber, sNumber));
                         }
-                        catch (DivideByZeroException e)
+                        catch (DivideByZeroException)
                         {
                             Console.WriteLine("Caught DivideByZeroException from calculator logic, printing exception:");
                         }
@@ -70,7 +69,7 @@ namespace Lab2._2
                         {
                             Console.WriteLine("The Answer is: " + myCalc.Add(fNumber, sNumber));
                         }
-                        catch (OverflowException oe)
+                        catch (OverflowException)
                         {
                             Console.WriteLine("Caught overflow exception from calculator logic, printing exception: ");
                         }
