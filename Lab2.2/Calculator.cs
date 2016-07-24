@@ -2,11 +2,13 @@
 
 namespace Lab2._2
 {
+    //It was a good idea to exract this logic to a new class.
     public class Calculations
     {
         public double Divide(double number1, double number2)
         {
 
+            //Are you sure this is necessary? 
             if (number2 == 0)
             {
                 throw new DivideByZeroException();
@@ -32,6 +34,7 @@ namespace Lab2._2
         }
     }
 
+    //"0" is printed when the input is invalid.
     public class Calculator
     {
         private static void Main()

@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CalculatorTest
 {
+    //Good tests.
     [TestClass]
     public class UnitTest1
     {
